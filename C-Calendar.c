@@ -32,10 +32,6 @@ void print_header(const int year, const int month) {
   printf("Su Mo Tu We Th Fr Sa\n");
 }
 
-// you may use these constants in your code if you wish
-// it is not a requirement, but it is strongly recommended
-// you may not change their values
-
 const int SUNDAY = 0;
 const int base_year = 1589;
 const int base_year_jan_1 = SUNDAY;
@@ -293,8 +289,6 @@ void assertion_tests(void) {
   // Due date is a valid date and a Thursday 
   assert(valid_date(2021, 1, 28));
   assert(day_of_the_week(2021, 1, 28) == 4);
-  
-  // Add your own assertion-based tests below
   assert(valid_date(2020, 2, 29));
   assert(valid_date(1590, 1, 1));
   assert(valid_date(2999, 12, 31));
@@ -304,16 +298,8 @@ void assertion_tests(void) {
   assert(valid_date(2999, 4, 30));
   assert(valid_date(2999, 8, 30));
   assert(!valid_date(2999, 2, 31));
-  //day_of_the_week
-  trace_int(day_of_the_week(2020, 11, 1));
-  trace_int(day_of_the_week(2021, 1, 1));  
-  trace_int(increment(2021, 5, 6));
   assert(leap_year(2000));
 }
-
-///////////////////////////////////////////////////////
-// You do not need to modify the rest of the program //
-///////////////////////////////////////////////////////
 
 int main(void) {
   assertion_tests();
